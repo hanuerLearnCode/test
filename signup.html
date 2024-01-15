@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-section {
+            position: relative;
+            box-sizing: border-box;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form {
+            border: 1px solid;
+            padding: 100px;
+            border-radius: 20px;
+            padding-bottom: 70px;
+        }
+
+
+        input {
+            border-radius: 5px;
+            border: 0.5px solid;
+            padding: 10px;
+            width: 100%;
+        }
+
+        #button-div {
+            text-align: center;
+        }
+        
+        .error {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="navbar-container">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar navbar-header">
+                        <a href="#reload" class="navbar-brand">An Phake</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#menu" data-toggle="dropdown" class="dropdown-toggle">
+                                Tất cả danh mục
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#laptop">Laptop</a></li>
+                                <li><a href="#mobile">Mobile</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    
+                <form action="" class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="" placeholder="Tìm kiếm sản phẩm" id="search">
+                        <button class="btn btn-default">
+                            <a href="#search">
+                            <span class="glyphicon glyphicon-search"> Tìm kiếm</span>
+                            </a>
+                        </button>
+                    </div>
+                </form>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#contact"><span class="glyphicon glyphicon-earphone"> 1900 0323</span></a></li>
+                        <li><a href="#login"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+                        <li><a href="#signup"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
+                        <li>
+                            <a href="#shoppingCart">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                                <!-- <span class="badge">0</span> -->
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="form-section">
+
+            <form action="./main.html" class="form">
+                <div class="form-group">
+                    <label for="username">Username</label> <br>
+                    <input required type="text" name="" id="username" placeholder="Enter username">    
+                </div>
+                <p class="error" id="error-username" style="color: lightcoral;"><i>(*)Vui lòng điền vào trường này</i></p>
+                <div class="form-group">
+                    <label for="password">Password</label> <br>
+                    <input required type="password" name="" id="pw" placeholder="Enter password">
+                </div>
+                <p class="error" id="error-pw" style="color: lightcoral;"><i>(*)Vui lòng điền vào trường này</i></p>
+                <div class="form-group">
+                    <label for="confirm-pw">Confirm Password</label> <br>
+                    <input required type="password" name="" id="confirm-pw" placeholder="Confirm your password">
+                    
+                </div>
+                <p class="error" id="error-confirm-pw" style="color: lightcoral;"><i>(*)Vui lòng điền vào trường này</i></p>
+                <div class="form-group">
+                    <label for="email">Email</label> <br>
+                    <input placeholder="Enter your email (optional)" type="email" name="" id="email">
+                   
+                </div>
+                <div class="form-group" id="button-div">
+                    <button id="log" type="submit" class="btn btn-default">
+                        <a href="#signup-button"><span class="glyphicon glyphicon-log-in"> SignUp</span></a>
+                    </button>
+                </div>
+                <div class="form-group" id="text">
+                    <p>Already have an account, <a href="#login"><span style="color: blue;">Login</span></a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    
+    <script>
+        
+        $("document").ready(function() {
+            $("#username").blur(function(){
+                let username = $(this).val();
+                if(username == "") {
+                    $("#error-username").removeClass("error");
+                } else {
+                    $("#error-username").addClass("error");
+                }
+            })
+            $("#pw").blur(function() {
+                let pw = $(this).val();        
+                if( pw == "") {
+                    $("#error-pw").removeClass("error");
+                } else {
+                    $("#error-pw").addClass("error");
+                } 
+            }) 
+
+            $("#confirm-pw").blur(function() {
+                if($(this).val() == "") {
+                    $("#error-confirm-pw").removeClass("error");
+                } else if ($(this).val() != $("#pw").val()) {
+                    $("#error-confirm-pw").text("Mật khẩu không trùng khớp");
+                    $("#error-confirm-pw").removeClass("error");
+                } else {
+                    $("#error-confirm-pw").addClass("error");
+                }
+            })
+
+            $("[href='#signup-button']").click(function(event) {
+                if ($("#username").val() =="") {
+                    $("#error-username").removeClass("error");
+                    event.preventDefault();
+                }
+                if($("#pw").val() =="") {
+                    $("#error-pw").removeClass("error");
+                    event.preventDefault();
+                }
+                if($("#confirm-pw").val() == "") {
+                    $("#error-confirm-pw").removeClass("error");
+                    event.preventDefault();
+                }
+            })
+
+        })
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

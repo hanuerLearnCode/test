@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppo Find X5 Pro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #mobile {
+        position: relative;
+        margin-top: 400px;
+        padding-right: 20px;
+        }
+        #laptop {
+        position: absolute;
+        margin-top: 300px;
+        padding-bottom: 30px;
+        }   
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar navbar-header">
+                    <a href="#reload" class="navbar-brand">An Phake</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#menu" data-toggle="dropdown" class="dropdown-toggle">
+                            Tất cả danh mục
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#laptop">Laptop</a></li>
+                            <li><a href="#mobile">Mobile</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                
+            <form action="" class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="" placeholder="Tìm kiếm sản phẩm" id="search">
+                    <button class="btn btn-default">
+                        <a href="#search">
+                        <span class="glyphicon glyphicon-search"> Tìm kiếm</span>
+                        </a>
+                    </button>
+                </div>
+            </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#contact"><span class="glyphicon glyphicon-earphone"> 1900 0323</span></a></li>
+                    <li><a href="#login"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+                    <li><a href="#signup"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
+                    <li>
+                        <a href="#shoppingCart">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div class="product-display" style="margin-top: 50px;">
+            <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div class="main">
+                        <img id="main-display" src="./images/oppo/oppo1.jpg" alt="preview">
+                        <button id="left" class="btn btn-default"><span class="glyphicon glyphicon-menu-left"></span></button>
+                        <button id="right" class="btn btn-default"><span class="glyphicon glyphicon-menu-right"></span></button>
+                    </div>
+                    <div class="second-row">
+                        <div class="col-md-3">
+                            <img src="./images/oppo/oppo1.jpg" alt="preview">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="./images/oppo/oppo2.jpg" alt="preview">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="./images/oppo/oppo3.jpg" alt="preview">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="./images/oppo/oppo4.jpg" alt="preview">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="description">
+                        <h2>Oppo Find X5 Pro</h2>
+                        <p>Some description</p>    
+                    </div>
+                    <div class="price">
+                        17.000.000
+                        <span><abbr title="Vietnam Dong">VND</abbr></span>
+                    </div>
+                    <div class="addToCart">
+                        <button id="addToCart" class="btn btn-danger">
+                            <a id="Buy" href="#cart">Buy Now</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="mobile-hidden" id="mobile">
+                <div class="col-md-12">
+                    <h3>Mobile</h3>
+                </div>
+                <div class="col-md-3">
+                    <a href="#apple"> 
+                        <img class="pd-display" src="./images/apple/apple1.jpeg" alt="">
+                        <div style="text-align: center;">Iphone 11</div>   
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#samsung">
+                        <img class="pd-display" src="./images/samsung/samsung1.jpg" alt="">
+                        <div style="text-align: center;">Samsung S22</div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#xiaomi">
+                        <img class="pd-display" src="./images/xiaomi/xiaomi1.jpg" alt="">
+                        <div style="text-align: center;">Xiaomi 11</div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#oppo">
+                        <img  class="pd-display" src="./images/oppo/oppo1.jpg" alt="">
+                        <div style="text-align: center;">Oppo Find X5 Pro</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="Laptop-hidden" id="laptop" >
+                <div class="col-md-12">
+                    <h3>Laptop</h3>
+                </div>
+                <div class="col-md-3">
+                    <a href="#dell">
+                        <img class="pd-display" src="./images/dell/dell.jpg" alt="preview">
+                        <div style="text-align: center;">Dell Vostro 5620</div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#acer">
+                        <img class="pd-display" src="./images/acer/acer.jpg" alt="">
+                        <div style="text-align: center;">Acer Aspire 3</div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#asus">
+                        <img class="pd-display" src="./images/asus/asus.jpg" alt="">
+                        <div style="text-align: center;">Asus Vivobook 15 OLED</div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#lenovo">
+                        <img class="pd-display" src="./images/lenovo/lenovo1.jpg" alt="">
+                        <div style="text-align: center;">Lenovo Ideapad 5 Pro</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var src_list = ['oppo1.jpg','oppo2.jpg','oppo3.jpg','oppo4.jpg'];
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
